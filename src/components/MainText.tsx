@@ -15,13 +15,15 @@ const MainText: React.FC = () => {
         <h3 className='text-Black font-bold text-4xl mt-3'>Fall Limited Edition Sneakers</h3>
 
         <p className='text-Grayishblue my-8'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        
+        <div className="flex md:flex-col justify-between items-center md:items-start h-12">
+            <div className="w-2/4 md:w-2/5 flex justify-between items-center">
+                <span className='text-Black text-2xl font-bold'>$125.00</span>
+                <span className='bg-PaleOrange text-Orange font-bold rounded-sm px-2'>50%</span>
+            </div>
 
-        <div className="w-2/4 md:w-2/5 flex justify-between mt-6 items-center">
-            <span className='text-Black text-2xl font-bold'>$125.00</span>
-            <span className='bg-PaleOrange text-Orange font-bold rounded-sm px-2'>50%</span>
+            <span className='text-Grayishblue font-bold'><StrikethroughText>$250.00</StrikethroughText></span>
         </div>
-
-        <span className='text-Grayishblue font-bold'><StrikethroughText>$250.00</StrikethroughText></span>
 
         <div className="md:flex justify-between w-full mt-5 md:mt-10 h-12">
             <div className="bg-PaleOrange justify-between px-3 md:w-2/5 h-full flex items-center rounded-lg">
@@ -30,7 +32,7 @@ const MainText: React.FC = () => {
                 <img src={Plus} alt="" className='cursor-pointer' />
             </div>
 
-            <div className="md:w-2/4 mt-5 mb-20 h-full bg-Orange text-White rounded-lg flex justify-around px-10 items-center">
+            <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange text-White rounded-lg flex justify-around px-10 items-center">
                 <img src={Cart} alt="icon cart" />
                 <button className=''>Add to Cart</button>
             </div>
