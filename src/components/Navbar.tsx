@@ -4,7 +4,7 @@ import Cart from "../assets/icon-cart.svg"
 import Menu from "../assets/icon-menu.svg"
 import Avatar from "../assets/image-avatar.png"
 
-function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <>
         <nav className='flex w-full h-24 justify-between px-5 md:px-10 lg:px-14 items-center'>

@@ -4,3 +4,23 @@
   padding: 2rem;
   text-align: center;
 } */
+
+.rightArrowStyles {
+  position: absolute;
+  top: 80%;
+  transform: translate(0, -50%);
+  right: 10px;
+  font-size: 45px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leftArrowStyles {
+  position: absolute;
+  top: 80%;
+  transform: translate(0, -50%);
+  left: 10px;
+  font-size: 45px;
+  z-index: 1;
+  cursor: pointer;
+}
