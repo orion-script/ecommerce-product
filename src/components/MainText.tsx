@@ -28,13 +28,13 @@ const MainText: React.FC = () => {
         <div className="md:flex justify-between w-full mt-5 md:mt-10 h-12">
             <div className="bg-PaleOrange justify-between px-3 md:w-2/5 h-full flex items-center rounded-lg">
                 <img src={Minus} alt="" className='cursor-pointer' />
-                <span>0</span>
+                <span className='cursor-pointer'>0</span>
                 <img src={Plus} alt="" className='cursor-pointer' />
             </div>
 
-            <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange text-White rounded-lg flex justify-around px-10 items-center">
-                <img src={Cart} alt="icon cart" />
-                <button className=''>Add to Cart</button>
+            <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange hover:opacity-50 text-White rounded-lg flex justify-around px-10 items-center cursor-pointer">
+                <img src={Cart} alt="icon cart" className='fill-white' />
+                <button>Add to Cart</button>
             </div>
         </div>
     </div>

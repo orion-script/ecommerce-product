@@ -1,11 +1,17 @@
 #root {
   background-color: white;
-  margin-bottom: 3rem;
+  /* margin-bottom: 2rem; */
   /* max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center; */
 }
+
+/* @media only screen and (max-width: 768px) {
+  #root {
+    margin-bottom: 2rem;
+  }
+} */
 
 .rightArrowStyles {
   position: absolute;
