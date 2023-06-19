@@ -21,10 +21,10 @@ const MobileImage: React.FC = () => {
       setCurrentIndex(newIndex);
     };
   return (
-    <div className="md:hidden w-full h-40 relative">
+    <div className="md:hidden w-full h-full relative">
       <img src={Next} alt="" onClick={goToNext} className="rightArrowStyles" />
       <img src={Previous} alt="" onClick={goToPrevious} className="leftArrowStyles" />
-      <img src={Photos[currentIndex].url} alt="" className='rounded-xl' />
+      <img src={Photos[currentIndex].url} alt="" className='' />
     </div>
   )
 }

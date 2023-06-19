@@ -7,7 +7,7 @@ import Avatar from "../assets/image-avatar.png"
 const Navbar: React.FC = () => {
   return (
     <>
-        <nav className='flex w-full h-24 justify-between px-5 md:px-10 lg:px-14 items-center'>
+        <nav className='flex w-full h-16 md:h-24 justify-between px-5 md:px-10 lg:px-14 items-center'>
             
             <img src={Menu} alt="menu icon" className='md:hidden' />
             <div className="flex justify-between md:w-4/5 lg:w-[70%]">
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
                 <img src={Avatar} alt="avatar image" className='h-8 cursor-pointer' />
             </div>
         </nav>
-        <hr className="bg-slate-200 h-px w-11/12 m-auto" />
+        <hr className="bg-slate-200 h-px w-11/12 m-auto hidden md:block" />
     </>
   )
 }

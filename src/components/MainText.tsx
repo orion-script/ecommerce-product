@@ -8,7 +8,7 @@ function StrikethroughText({children}) {
 
 const MainText: React.FC = () => {
   return (
-    <div className="md:w-2/5 h-[27rem] mt-40 md:mt-0">
+    <div className="w-4/5 m-auto md:w-2/5 h-[27rem] mt-16 md:mt-0">
         <p className='text-Orange font-mono font-extrabold'>SNEAKER COMPANY</p>
 
         <h3 className='text-Black font-bold text-4xl mt-3'>Fall Limited Edition Sneakers</h3>
