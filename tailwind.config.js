@@ -16,8 +16,17 @@ export default {
         "White": "hsl(0, 0%, 100%)",
         "Black": "hsl(0, 0%, 0%)",
       },
+
+      keyframes: {
+        "open-menu": {
+          "0%": {transform: "translateX(-100%)"},
+          "100%": {transform: "translateX(0%)"},
+        },
+      },
+      animation: {
+        "open-menu": "open-menu 0.7s ease-in-out forwards"
+      }
     },
   },
   plugins: [],
 }
-
