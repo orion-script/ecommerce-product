@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
                 </div>
             <div className="flex justify-between md:w-4/5 lg:w-[70%]">
                 <img src={Logo} alt="logo icon" />
-                <ul className={`${navbar ? "block h-screen fixed top-16 left-0 right-0 z-10 pl-5 pt-5 w-4/5 font-bold text-xl" : "hidden"} md:flex justify-between md:w-3/5 bg-White animate-open-menu`}>
+                <ul className={`${navbar ? "block h-screen fixed top-16 left-0 right-0 z-10 pl-5 pt-5 w-4/5 font-bold text-xl animate-open-menu" : "hidden"} md:flex justify-between md:w-3/5 bg-White`}>
                     <li><a href="/">Collections</a></li>
                     <li className='py-3 md:py-0'><a href="/">Men</a></li>
                     <li><a href="/">Women</a></li>
