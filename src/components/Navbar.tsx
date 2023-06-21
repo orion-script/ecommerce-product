@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg"
 import Cart from "../assets/icon-cart.svg"
 import Menu from "../assets/icon-menu.svg"
@@ -34,7 +35,9 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="flex justify-between md:w-4/5 lg:w-[70%]">
-                <img src={Logo} alt="logo icon" />
+                <Link to="/">
+                    <img src={Logo} alt="logo icon" className='cursor-pointer' />
+                </Link>
 
                 <ul className={`${navbar ? "block h-screen fixed top-16 left-0 right-0 z-10 pl-5 pt-5 w-4/5 font-bold text-xl animate-open-menu" : "hidden"} md:flex justify-between md:w-3/5 bg-White`}>
                     <li><a href="/">Collections</a></li>

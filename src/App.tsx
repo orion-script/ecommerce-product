@@ -1,19 +1,18 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
 import './App.css'
-import Navbar from './components/Navbar'
-import Main from './components/Main'
-import Typing from "./components/Typing"
+import Checkout from './routes/Checkout';
 
 function App() {
 
   return (
-    <>
-    <Navbar />
-    <Main />
-    <div className="text-center mt-20 md:mt-8">
-      <Typing />
-    </div>
-    </>
+    <Router>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </Router>
   )
 }
 
