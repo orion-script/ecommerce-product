@@ -58,7 +58,7 @@ const DesktopImage: React.FC = () => {
           <div className="relative w-2/5 h-4/6">
             <img src={Previous} alt="" className="absolute top-1/2 -translate-y-1/2 left-0 m-4 cursor-pointer" onClick={handlePreviousImage} />
 
-            <img src={Close} alt="" className="absolute top-0 right-0 m-4 cursor-pointer" onClick={handleCloseLightbox} />
+            <img src={Close} alt="" className="absolute top-0 right-0 m-4 cursor-pointer text-White bg-gray-950 p-1" onClick={handleCloseLightbox} />
 
             <img src={Next} alt="" className="absolute top-1/2 -translate-y-1/2 right-0 m-4 cursor-pointer" onClick={handleNextImage} />
         

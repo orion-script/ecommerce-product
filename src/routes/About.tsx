@@ -1,16 +1,16 @@
 import React from 'react'
 import GoBackButton from '../components/GoBackButton'
 
-function NotFound() {
+function About() {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl">Oops! Page not found.</p>
+        <p className="text-xl">About</p>
+        <p className="text-xl">Nothing is here yet👌</p>
         <GoBackButton />
       </div>
     </div>
   )
 }
 
-export default NotFound
+export default About
