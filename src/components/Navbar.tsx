@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-        <nav className='flex w-full h-14 md:h-24 justify-between px-5 md:px-10 lg:px-14 items-center fixed top-0 z-50 bg-White'>
+        <nav className='flex w-full h-14 md:h-20 justify-between px-5 md:px-10 lg:px-14 items-center md:static fixed top-0 z-50 bg-White'>
             
             <div className="md:hidden">
                 <button

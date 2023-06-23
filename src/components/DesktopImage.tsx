@@ -53,6 +53,8 @@ const DesktopImage: React.FC = () => {
         ))}
       </div>
 
+      {/* ============ Lightbox Start =========== */}
+
       {isLightboxOpen && (
         <div className="fixed w-screen h-screen inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75" onClick={handleLightboxClick}>
           <div className="relative w-2/5 h-4/6">
@@ -72,7 +74,7 @@ const DesktopImage: React.FC = () => {
                 src={photo.url}
                 alt={`Product ${photo.id}`}
                 className={`w-[20%] rounded-lg cursor-pointer hover:opacity-50 hover:border-4 hover:border-Orange ${
-                  id === currentIndex ? 'opacity-50' : ''
+                  id === currentIndex ? 'opacity-50 border-4 border-White' : ''
                 }`}
                 onClick={() => handleClick(photo.id)}
               />

@@ -6,7 +6,7 @@ import MainText from "./MainText";
 const Main: React.FC = () => {
 
   return (
-    <div className='md:flex justify-between w-full md:w-10/12 m-auto mt-16 md:mt-32'>
+    <div className='md:flex justify-between w-full md:w-10/12 m-auto mt-16 md:mt-16'>
         <MobileImage />
         <DesktopImage />
         <MainText />
