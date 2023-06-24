@@ -1,16 +1,17 @@
-import React from 'react'
+// import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import Minus from "../assets/icon-minus.svg"
 import Plus from "../assets/icon-plus.svg"
 import Cart from "../assets/icon-cart.svg"
 
-function StrikethroughText({children}) {
-    return <span style={{textDecoration: 'line-through'}}>{children}</span>;
-}
+// function StrikethroughText({children}) {
+//     return <span style={{textDecoration: 'line-through'}}>{children}</span>;
+// }
 
-const MainText: React.FC = () => {
-    const { addItemToCart } = useContext(CartContext)
+const MainText= () => {
+    const { cartItems, addItemToCart, removeItemFromCart, cartCount } = useContext(CartContext)
+
     
   return (
     <div className="w-4/5 m-auto md:w-2/5 h-[27rem] mt-16 md:mt-0">
@@ -26,14 +27,15 @@ const MainText: React.FC = () => {
                 <span className='bg-PaleOrange text-Orange font-bold rounded-sm px-2'>50%</span>
             </div>
 
-            <span className='text-Grayishblue font-bold'><StrikethroughText>$250.00</StrikethroughText></span>
+            {/* <span className='text-Grayishblue font-bold'><StrikethroughText>$250.00</StrikethroughText></span> */}
+            <p>250.00</p>
         </div>
 
         <div className="md:flex justify-between w-full mt-5 md:mt-10 h-12">
             <div className="bg-PaleOrange justify-between px-3 md:w-2/5 h-full flex items-center rounded-lg">
-                <img src={Minus} alt="" className='cursor-pointer' />
-                <span className='cursor-pointer'>0</span>
-                <img src={Plus} alt="" className='cursor-pointer' />
+                <img src={Minus} alt="" className='cursor-pointer' onClick={() => removeItemFromCart(cartItems)} />
+                <span className='cursor-pointer'>{cartCount}</span>
+                <img src={Plus} alt="" className='cursor-pointer' onClick={() => addItemToCart(cartItems)} />
             </div>
 
             <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange hover:opacity-50 text-White rounded-lg flex justify-around px-10 items-center cursor-pointer" onClick={addItemToCart}>
