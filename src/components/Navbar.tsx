@@ -1,13 +1,16 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState, useEffect, useContext } from 'react'
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg"
-import Cart from "../assets/icon-cart.svg"
 import Menu from "../assets/icon-menu.svg"
 import Close from "../assets/icon-close.svg"
 import Avatar from "../assets/image-avatar.png"
+import CartDropDown from "./CartDropDown"
+import CartIcon from './CartIcon';
+import { CartContext } from '../context/CartContext';
 
 const Navbar: React.FC = () => {
     const [navbar, setNavbar] = useState(false);
+    const {isCartOpen} = useContext(CartContext)
 
     useEffect(() => {
         navbar && screen.width < 480 ? document.body.classList.add("fixed") : document.body.classList.remove("fixed");
@@ -49,15 +52,14 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="w-3/12 md:w-[10%] flex items-center justify-between">
-                <div className="relative">
-                    <img src={Cart} alt="cart icon"className='cursor-pointer' />
-                    <p className='absolute top-[-10px] right-[-8px] bg-Orange w-[20px] h-[18px] rounded-md text-White flex justify-center items-center'>3</p>
-                </div>
+                <CartIcon />
                 <img src={Avatar} alt="avatar image" className='h-8 cursor-pointer' />
             </div>
         </nav>
         
         <hr className="bg-slate-200 h-px w-11/12 m-auto hidden md:block" />
+
+        { isCartOpen && <CartDropDown />}
     </>
   )
 }

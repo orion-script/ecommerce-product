@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 import Minus from "../assets/icon-minus.svg"
 import Plus from "../assets/icon-plus.svg"
 import Cart from "../assets/icon-cart.svg"
@@ -8,6 +10,8 @@ function StrikethroughText({children}) {
 }
 
 const MainText: React.FC = () => {
+    const { addItemToCart } = useContext(CartContext)
+    
   return (
     <div className="w-4/5 m-auto md:w-2/5 h-[27rem] mt-16 md:mt-0">
         <p className='text-Orange font-mono font-extrabold'>SNEAKER COMPANY</p>
@@ -32,7 +36,7 @@ const MainText: React.FC = () => {
                 <img src={Plus} alt="" className='cursor-pointer' />
             </div>
 
-            <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange hover:opacity-50 text-White rounded-lg flex justify-around px-10 items-center cursor-pointer">
+            <div className="md:w-2/4 mt-5 md:mt-0 h-full bg-Orange hover:opacity-50 text-White rounded-lg flex justify-around px-10 items-center cursor-pointer" onClick={addItemToCart}>
                 <img src={Cart} alt="icon cart" className='fill-white' />
                 <button>Add to Cart</button>
             </div>
